@@ -1,0 +1,171 @@
+body {
+  /* background-color: aquamarine; */
+  background-color: rgba(157,255,212,75%);
+  }
+  
+  /* .ant-layout {
+    background-color:aquamarine; */
+    /* background-color: rgba(157,255,212,25%); */
+    /* margin: 10px 10px 10px 10px;
+  } */
+
+/* search box on results page */
+.searchPlaceholder {
+  float: right;
+  margin-right: 2%;
+  margin-bottom: 1em;
+}
+/* search box on results page */
+.ant-input {
+  border-style: hidden;
+  border-color: transparent;
+}
+
+/* Ant table on results page */
+.ant-table-wrapper {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+/* action buttons on results page */
+.ant-btn-default {
+  border: none;
+  background-color: transparent;
+}
+
+/* action buttons on results page */
+.ant-btn-default:hover {
+  color: rgb(131, 141, 143);
+}
+
+/* Ant table on results page */
+Table {
+  /* margin: 10px; */
+  padding: 2px;
+  font-size: smaller;
+  /* border-collapse: collapse; */
+  /* margin: 20px 20px 0px 20px; */
+}
+
+/* table rows on results page */
+.rowClassName1 {
+  border-width:  10px;
+  background-color: rgb(214, 220, 220);
+  border-style: solid;
+  margin-bottom: 2px;
+  padding: 2px;
+  padding-top: 2px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  max-height: 10px;
+}
+
+/* Results table body */
+.ant-table-tbody {
+  padding: 2px;
+  font-family: monospace;
+}
+
+/* row data */
+.ant-table-tbody > tr > td {
+  height: 5px;
+  padding: 4px;
+}
+
+Header > h2 {
+  color:rgb(214, 220, 220);
+}
+
+/* this is the form */
+.itemForm {
+  color: rgb(0,21,31);
+  /* display:flex; */
+  /* justify-content: center; */
+  align-items: center;
+  background-color: rgb(231, 243, 243);
+  padding: 40px 40px 15px 40px;
+  border-radius: 15px;
+  width: 34em;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+.itemFormHeading {
+  /* background-color: black; */
+  color: rgb(0,21,31);
+  padding-top: 8px;
+  padding-bottom: 6px;
+  letter-spacing: 1px;
+  font-weight: 800;
+  font-size: large;
+}
+
+/* each label and input is a singleItem */
+.singleItem{
+  margin-top: 20px;
+}
+
+/* labels for each input */
+.formLabel {
+  font-weight: 600;
+  padding-top: 30px;
+  /* color: rgb(95,95,95); */
+  color: #001529;
+
+}
+
+/* input */
+.itemInput{
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid #001529;
+  background-color: rgb(231, 243, 243);
+  width:28em;
+  font-family: monospace;
+}
+
+/* metadata labels on edit form */
+.metadataLabelleft {
+  font-size: x-small;
+  padding-top: 2em;
+  height: fit-content;
+  float: left;
+}
+/* metadata labels on edit form */
+.metadataLabelright {
+  font-size: x-small;
+  padding-top: 20px;
+  height: fit-content;
+  float: right;
+}
+/* metadata labels on edit form */
+.clearBoth {
+  clear: both;
+}
+
+.formButton {
+  background-color: rgb(231, 243, 243);
+  border-radius: 2px;
+  color: rgb(0,21,31);
+  border-width: 1px;
+  border: 1px solid rgb(0,21,31,60%);
+  padding: 5px 12px;
+  margin-top: 18px;
+}
+.formButton:hover {
+  background-color: rgb(0,21,31);
+  color: white;
+}
+
+a  {
+  color: black;
+}
+
+a:hover {
+  color: aquamarine
+}
+
+.ant-input-affix-wrapper {
+  margin-left: 2em;
+}
