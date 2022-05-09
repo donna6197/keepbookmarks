@@ -1,9 +1,6 @@
 // 'use strict';
 // const { Sequelize } = require('sequelize');
 
-// // const sequelize = new Sequelize('postgres://wvltqdwh:eM2_9g0UdrIR7XSE9bor4VEuE-wXA06U@arjuna.db.elephantsql.com/wvltqdwh', {})
-// const sequelize = new Sequelize('postgres://eaglimxe:LvIpuxcZ9I-UPPm4EaSiCS84Qe6yUm4o@arjuna.db.elephantsql.com/eaglimxe', {})
-
 // const connectMysql = async () => {
 // try {
 // await sequelize.authenticate();
