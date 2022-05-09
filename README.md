@@ -13,18 +13,18 @@ clone the project
 
 ## back end installation and customisation
 
-cd to keepbookmarks\backend
-npm i
-Locate .\backend\db.config.js
-Change the HOST, USER, PASSWORD, DB, and PORT to match what you are using
+cd to keepbookmarks>backend\
+npm i\
+Locate backend>db.config.js\
+Change the HOST, USER, PASSWORD, DB, and PORT to match what you are using\
 npm start to run backend
 
 ## front end installation and customisation
 
-cd to keepbookmarks\frontend
-npm i
-Locate .\frontend\src\component\env.js
-Change the url and port to the one you are using
+cd to keepbookmarks>frontend\
+npm i\
+Locate frontend>src>component>env.js\
+Change the url and port to the one you are using\
 npm start to run frontend
 
 
