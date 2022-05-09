@@ -1,8 +1,32 @@
 # keepbookmarks
 
-Capstone project. An application for storing, updating, deleting bookmark links. React and Expressjs.
+Capstone project. An application for storing, updating, deleting bookmark links.
 
-note: need to add points on how to run project
+This app was built using React and Expressjs.
+See "Getting started with Create React App" (below) for information on React.
+
+# installation
+
+clone the project
+
+
+
+## back end installation and customisation
+
+cd to keepbookmarks\backend
+npm i
+Locate .\backend\db.config.js
+Change the HOST, USER, PASSWORD, DB, and PORT to match what you are using
+npm start to run backend
+
+## front end installation and customisation
+
+cd to keepbookmarks\frontend
+npm i
+Locate .\frontend\src\component\env.js
+Change the url and port to the one you are using
+npm start to run frontend
+
 
 # Getting Started with Create React App
 
