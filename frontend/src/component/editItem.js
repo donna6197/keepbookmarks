@@ -3,6 +3,11 @@ import 'antd/dist/antd.css';
 import "../styles.css"; 
 import { useParams, useNavigate } from "react-router-dom";
 
+
+const env = require('./env');
+let url = env.url(); // pull in the url
+// console.log(url);  
+
 let EditItem = (props) => {
 
   let [formState, setFormState] = React.useState(
@@ -26,7 +31,8 @@ let EditItem = (props) => {
   useEffect(() => {
 
     //fetch the individiual item
-    fetch(`http://127.0.0.1:5000/bookmarks/getEntryById`, { 
+    // fetch(`http://127.0.0.1:5000/bookmarks/getEntryById`, { 
+    fetch(url+`/bookmarks/getEntryById`, { 
     method: "POST",
     mode: "cors",
     headers: {
@@ -82,7 +88,8 @@ let EditItem = (props) => {
     }
 
     //now over to the bookmarkRoute to do all the work
-    fetch(`http://127.0.0.1:5000/bookmarks/updateSingleItem`, { 
+    // fetch(`http://127.0.0.1:5000/bookmarks/updateSingleItem`, { 
+    fetch(url+`/bookmarks/updateSingleItem`, { 
       method: "PUT",
       mode: "cors",
       headers: {
