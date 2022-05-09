@@ -4,7 +4,7 @@
 //     // 'postgres://eaglimxe:LvIpuxcZ9I-UPPm4EaSiCS84Qe6yUm4o@arjuna.db.elephantsql.com/eaglimxe:5432/bmkData'
 //   host                 : 'arjuna.db.elephantsql.com/eaglimxe',            // Postgres ip address[s] or domain name[s]
 //   port                 : 5432,          // Postgres server port[s]
-//   database             : 'bmkData',            // Name of database to connect to
+//   database             : '',            // Name of database to connect to
 //   username             : 'eaglimxe',            // Username of database user
 //   password             : 'LvIpuxcZ9I-UPPm4EaSiCS84Qe6yUm4o'            // Password of database user
 // })
