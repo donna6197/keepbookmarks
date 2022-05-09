@@ -8,12 +8,17 @@ import {  DeleteOutlined, EditOutlined, LinkOutlined } from '@ant-design/icons';
 import { Input } from 'antd';
 import { useNavigate } from 'react-router-dom';
 
+const env = require('./env');
+let url = env.url(); // pull in the url
+console.log(url);  
+
 let ReturnedResults = (props) => {
   let [dataObjState, setDataObj] = React.useState(0);
 
   useEffect(() => {
     //now over to the bookmarkRoute to do all the work
-    fetch(`http://127.0.0.1:5000/bookmarks/getAllEntries`, { 
+    // fetch(`http://127.0.0.1:5000/bookmarks/getAllEntries`, { 
+    fetch(url+`/bookmarks/getAllEntries`, { 
       method: "GET",
       mode: "cors",
       headers: {
@@ -39,7 +44,7 @@ let ReturnedResults = (props) => {
           bmk_comments: row.bmk_comments,
           bmk_id: row.bmk_id,
           actions:  [<Tooltip key={index+1000} title={row.bmk_link}><Button key={index+4000} icon={<LinkOutlined key={index+7000}/>} onClick={(e)=>{handleFollowLink(e, row.bmk_link)}}></Button></Tooltip>,
-          <Tooltip key={index+2000} title={"Edit item"}><Button key={index+5000} icon={<EditOutlined key={index+8000}/>} onClick={(e)=>{handleSearchEditbyID(e, row.bmk_id)}}  /></Tooltip>,
+                    <Tooltip key={index+2000} title={"Edit item"}><Button key={index+5000} icon={<EditOutlined key={index+8000}/>} onClick={(e)=>{handleSearchEditbyID(e, row.bmk_id)}}  /></Tooltip>,
                     <Tooltip key={index+3000} title={"Delete item"}><Button key={index+6000} icon={ <DeleteOutlined key={index+9000} />} onClick={(e)=>{handleDeleteItem(e, row.bmk_id)}}/></Tooltip>]
          //https://stackoverflow.com/questions/42597602/react-onclick-pass-event-with-parameter
         }))
@@ -62,7 +67,8 @@ let ReturnedResults = (props) => {
     let theItemToDelete = { bmk_id : itemValue};
 
     //delete fetch
-    fetch(`http://127.0.0.1:5000/bookmarks/deleteOneBookmark`, { 
+    // fetch(`http://127.0.0.1:5000/bookmarks/deleteOneBookmark`, { 
+      fetch(url+`/bookmarks/deleteOneBookmark`, { 
       method: "DELETE",
       mode: "cors",
       headers: {
@@ -123,7 +129,8 @@ let navigate = useNavigate();
     let itemValue1 = "%"+itemValue+"%"
     let theQueryText = { bmk_queryText : itemValue1};
   //fetch using text
-    fetch(`http://127.0.0.1:5000/bookmarks/getEntryByText`, { 
+    // fetch(`http://127.0.0.1:5000/bookmarks/getEntryByText`, { 
+    fetch(url+`/bookmarks/getEntryByText`, { 
       method: "POST",
       mode: "cors",
       headers: {
@@ -145,9 +152,9 @@ let navigate = useNavigate();
           bmk_description: row.bmk_description,
           bmk_comments: row.bmk_comments,
           bmk_id: row.bmk_id,
-          actions: [<Tooltip title={row.bmk_link}><Button icon={<LinkOutlined />} onClick={(e)=>{handleFollowLink(e, row.bmk_link)}}></Button></Tooltip>,
-                    <Tooltip title={"Edit item"}><Button icon={<EditOutlined />} onClick={(e)=>{handleSearchEditbyID(e, row.bmk_id)}}  /></Tooltip>,
-                    <Tooltip title={"Delete item"}><Button  icon={ <DeleteOutlined />} onClick={(e)=>{handleDeleteItem(e, row.bmk_id)}}/></Tooltip>]
+          actions:  [<Tooltip key={index+1000} title={row.bmk_link}><Button key={index+4000} icon={<LinkOutlined key={index+7000}/>} onClick={(e)=>{handleFollowLink(e, row.bmk_link)}}></Button></Tooltip>,
+                    <Tooltip key={index+2000} title={"Edit item"}><Button key={index+5000} icon={<EditOutlined key={index+8000}/>} onClick={(e)=>{handleSearchEditbyID(e, row.bmk_id)}}  /></Tooltip>,
+                    <Tooltip key={index+3000} title={"Delete item"}><Button key={index+6000} icon={ <DeleteOutlined key={index+9000} />} onClick={(e)=>{handleDeleteItem(e, row.bmk_id)}}/></Tooltip>]
         }))
       );
     })
@@ -196,7 +203,8 @@ let navigate = useNavigate();
       title: "ACTIONS",
       dataIndex: "actions",
       // dataIndex: "bmk_create_date",
-      width: 100,
+      width: 120,
+     align: "right",
       key: 5,
     }
   ];
@@ -228,7 +236,7 @@ let navigate = useNavigate();
       </Header>
       <MyDescription />
       <div className='searchPlaceholder'>
-        <Search placeholder="Title search"  onSearch={handleTitleSearch} style={{ width: 300 }}  />
+        <Search placeholder="Title search"  onSearch={handleTitleSearch} style={{ width: 200 }}  />
       </div>
       <Button type="button" id="addNew" onClick={(e)=>{handleAddItem(e)}} style={{marginLeft: '2%'}}>Add new item</Button>
 

@@ -3,6 +3,10 @@ import 'antd/dist/antd.css';
 import "../styles.css"; 
 import { useNavigate} from "react-router-dom";
 
+const env = require('./env');
+let url = env.url(); // pull in the url
+// console.log(url);  
+
 let NewItem = (props) => {
 
   let [formState, setFormState] = React.useState({ 
@@ -43,7 +47,8 @@ let NewItem = (props) => {
     }
    
     //now over to the bookmarkRoute to do all the work
-    fetch(`http://127.0.0.1:5000/bookmarks/createNewBookmark`, { 
+    // fetch(`http://127.0.0.1:5000/bookmarks/createNewBookmark`, { 
+      fetch(url+`/bookmarks/createNewBookmark`, { 
       method: "POST",
       mode: "cors",
       headers: {
