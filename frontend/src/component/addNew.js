@@ -9,6 +9,7 @@ let url = env.url(); // pull in the url
 
 let NewItem = (props) => {
 
+  // eslint-disable-next-line no-unused-vars
   let [formState, setFormState] = React.useState({ 
     itemTitle: " ", 
     itemLink: " ",

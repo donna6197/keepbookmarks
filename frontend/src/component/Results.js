@@ -50,7 +50,7 @@ let ReturnedResults = (props) => {
         }))
       );
     })
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   let handleFollowLink = (event, item) =>{
     window.open(item, '_blank');

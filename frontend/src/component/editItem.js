@@ -59,7 +59,7 @@ let EditItem = (props) => {
       }
     });
     })
-  },[]);
+  },[]); // eslint-disable-line react-hooks/exhaustive-deps
   // });
 //END GET EXISTING DATA TO POPULATE FORM
 
