@@ -9,67 +9,73 @@
     "url": "https://opensource.org/licenses/MIT"
     }
     },
-    "host": "localhost:3000",
+    "host": "localhost:5000",
     "basePath": "/",
     "tags": [
     {
-    "name": "Calculator",
-    "description": "API for Calculus in the system"
+    "name": "Keep my bookmarks",
+    "description": "Application to store bookmark links and associated metadata"
     }
     ],
     "schemes": ["http"],
     "consumes": ["application/json"],
     "produces": ["application/json"],
     "paths": {
-        "/calculator/add": {
+        "/bookmarks/getAllEntries": {
         "get": {
         "tags": [
-        "Addition Service"
+        "Get all"
         ],
-        "summary": "Add 2 numbers",
-        "parameters": [
-        {
-        "name": "num1",
-        "in": "query",
-        "description": "the First Number"
-        },
-        {
-        "name": "num2",
-        "in": "query",
-        "description": "the Second number"
-        }
-        ],
+        "summary": "Retrieves all entries from the database",
+        "parameters": [],
         "responses": {
         "200": {
-        "description": "This service allows you to add two numbers together"
+        "description": "This service returns all records"
         }
         }
         }    
     },
-        "/calculator/multiply": {
-            "get": {
+        "/bookmarks/getEntryById": {
+            "post": {
             "tags": [
-            "Multiply Service"
+            "Single entry"
             ],
-            "summary": "Multiply 2 numbers",
+            "summary": "Retrieve single entry from database using ID",
             "parameters": [
             {
-            "name": "num1",
+            "name": "bmk_id",
             "in": "query",
-            "description": "the First Number"
-            },
-            {
-            "name": "num2",
-            "in": "query",
-            "description": "the Second number"
+            "description": "the ID"
             }
             ],
             "responses": {
             "200": {
-            "description": "This service allows you to multiply two numbers together"
+            "description": "This services returns a single record"
             }
             }
             }    
-        }   
+    },
+        "/bookmarks/getEntryByText": {
+        "post": {
+        "tags": [
+        "Multiple entries"
+        ],
+        "summary": "Retrieve multiple entries from database column title using search string",
+        "parameters": [
+        {
+        "name": "bmk_description",
+        "in": "query",
+        "description": "search string"
+        }
+        ],
+        "responses": {
+        "200": {
+        "description": "This services returns all records matching search string",
+        "schema": {
+            "type": "array" }
+        }
+        }
+        }    
+    }     
 }
 }

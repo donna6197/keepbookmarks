@@ -2,11 +2,11 @@ const express = require('express');
 const req = require('express/lib/request');
 var router = express.Router();
 
+const dbConfig = require("../db.config.js")
+
 // https://blog.logrocket.com/nodejs-expressjs-postgresql-crud-rest-api-example/
 
 const Pool = require('pg').Pool
-
-// uncomment below and add required user, database and password details
 
 // const pool = new Pool({
 //   // user: '',
@@ -15,6 +15,14 @@ const Pool = require('pg').Pool
 //   // password: '',
 //   // port: 5432,
 // })
+
+const pool = new Pool ({
+  user: dbConfig.USER,
+  host: dbConfig.HOST,
+  database: dbConfig.DB,
+  password: dbConfig.PASSWORD,
+  port: dbConfig.PORT,
+})
 
 //return all entries
 router.get('/getAllEntries', (request, response) => {
