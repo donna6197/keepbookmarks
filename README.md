@@ -5,6 +5,17 @@ Capstone project. An application for storing, updating, deleting bookmark links.
 This app was built using React and Expressjs.
 See "Getting started with Create React App" (below) for information on React.
 
+# pre requisites
+
+Database with a table named "my_bookmarks"\
+Table must include the following six columns:\
+- bmk_id (bigint)\
+- bmk_description (varchar)\
+- bmk_link (varchar)\
+- bmk_comments (varchar)\
+- bmk_edit_date (datetime)\
+- bmk_edit_date (datetime)\
+
 # installation
 
 clone the project
