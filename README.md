@@ -7,7 +7,7 @@ See "Getting started with Create React App" (below) for information on React.
 
 ## pre requisites
 
-Database with a table named "my_bookmarks"\
+Database with a table named "my_bookmarks"
 
 Table must include the following six columns:
 - bmk_id (bigint)
@@ -28,7 +28,7 @@ clone the project
 cd to keepbookmarks>backend\
 npm i\
 Locate backend>db.config.js\
-Change the HOST, USER, PASSWORD, DB, and PORT to match what you are using\
+Change the HOST, USER, PASSWORD, DB, and PORT to match your database\
 npm start to run backend
 
 ## front end installation and customisation
